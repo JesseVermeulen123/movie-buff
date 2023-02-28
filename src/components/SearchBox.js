@@ -1,5 +1,4 @@
-import React from "react";
-
+// Search Box Component
 const SearchBox = (props) => {
   return (
     <div className="col col-sm-4">

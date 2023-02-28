@@ -1,5 +1,4 @@
-import React from "react";
-
+// Remove Favourites Component
 const RemoveFavourites = () => {
   return (
     <>

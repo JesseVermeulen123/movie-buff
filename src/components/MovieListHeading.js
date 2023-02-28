@@ -1,9 +1,8 @@
-import React from "react";
-
+// List Heading Component
 const MovieListHeading = (props) => {
   return (
     <div className="col">
-      <h1>{props.heading}</h1>
+      <h1 className="list-heading">{props.heading}</h1>
     </div>
   );
 };

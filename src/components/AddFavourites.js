@@ -1,5 +1,4 @@
-import React from "react";
-
+// Add Favourites Component
 const AddFavourites = (props) => {
   return (
     <>
