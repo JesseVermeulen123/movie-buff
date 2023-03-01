@@ -3,6 +3,14 @@ body {
   color: #fcfff8 !important;
 }
 
+header {
+  background-color: #39497D;
+  font-size: 50px;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: center;
+}
+
 .movie-app > .row {
   overflow-x: auto;
   flex-wrap: nowrap;
@@ -26,7 +34,7 @@ body {
 
 .overlay {
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.9);
   width: 100%;
   transition: 0.5s ease;
   opacity: 0;
