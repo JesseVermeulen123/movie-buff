@@ -6,8 +6,12 @@ body {
 .movie-app > .row {
   overflow-x: auto;
   flex-wrap: nowrap;
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
 }
-
+.movie-app > .row::-webkit-scrollbar { 
+  display: none;  /* Safari and Chrome */
+}
 .image-container {
   position: relative;
   transition: transform 0.2s;
