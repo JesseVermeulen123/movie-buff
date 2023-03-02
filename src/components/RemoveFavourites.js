@@ -7,7 +7,7 @@ const RemoveFavourites = () => {
         xmlns="http://www.w3.org/2000/svg"
         width="16"
         height="16"
-        fill="#805BA6"
+        fill="#39497D"
         class="bi bi-trash3-fill"
         viewBox="0 0 16 16"
       >

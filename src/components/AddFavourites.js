@@ -1,5 +1,5 @@
 // Add Favourites Component
-const AddFavourites = (props) => {
+const AddFavourites = () => {
   return (
     <>
       <span className="mr-2">Add to Favourites</span>
@@ -7,7 +7,7 @@ const AddFavourites = (props) => {
         xmlns="http://www.w3.org/2000/svg"
         width="16"
         height="16"
-        fill="#805BA6"
+        fill="#39497D"
         class="bi bi-heart-fill"
         viewBox="0 0 16 16"
       >

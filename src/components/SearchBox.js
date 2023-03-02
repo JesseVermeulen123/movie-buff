@@ -8,7 +8,7 @@ const SearchBox = (props) => {
         onChange={(event) => props.setSearchValue(event.target.value)}
         placeholder="Search for anything"
         title="Search"
-      ></input>
+      />
     </div>
   );
 };

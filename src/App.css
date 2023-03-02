@@ -1,25 +1,52 @@
+/* Color Root */
+:root {
+  --body: #201f31;
+  --header: #39497d;
+  --font-color: #fcfff8;
+  --alt-font-color: #7d7d8c;
+  --overlay: rgba(0, 0, 0, 0.8);
+}
+
+/* Body */
 body {
-  background: #201f31 !important;
-  color: #fcfff8 !important;
+  background: var(--body) !important;
+  color: var(--font-color) !important;
+  font-size: 16px;
 }
 
-header {
-  background-color: #39497D;
+/* Header */
+.header {
+  display: flex;
+  justify-content: center;
+  background-color: var(--header);
   font-size: 50px;
-  font-weight: 500;
+  font-weight: 700;
   text-transform: uppercase;
-  text-align: center;
+  cursor: default;
+}
+.header .logo-2 {
+  color: var(--alt-font-color);
 }
 
+/* List Heading */
+.list-heading {
+  color: var(--alt-font-color);
+  cursor: default;
+}
+
+/* List Row */
 .movie-app > .row {
   overflow-x: auto;
+  overflow-y: hidden;
   flex-wrap: nowrap;
-  -ms-overflow-style: none;  /* Internet Explorer 10+ */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
 }
-.movie-app > .row::-webkit-scrollbar { 
-  display: none;  /* Safari and Chrome */
+.movie-app > .row::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
 }
+
+/* Poster Image */
 .image-container {
   position: relative;
   transition: transform 0.2s;
@@ -28,22 +55,40 @@ header {
   cursor: pointer;
   transform: scale(1.1);
 }
-.image-container:hover .overlay {
+
+/* Top Overlay */
+.top-overlay {
+  position: absolute;
+  background-color: var(--overlay);
+  width: 100%;
+  transition: 0.5s ease;
+  opacity: 0;
+  top: 0;
+}
+.top-overlay ul {
+  margin-top: 1rem;
+  padding-left: 1rem;
+  list-style: none;
+}
+.top-overlay strong {
+  color: var(--alt-font-color);
+}
+.image-container:hover .top-overlay {
   opacity: 1;
 }
 
-.overlay {
+/* Bottom Overlay */
+.bottom-overlay {
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: var(--overlay);
   width: 100%;
   transition: 0.5s ease;
   opacity: 0;
   bottom: 0;
   font-size: 20px;
-  padding: 20px;
+  padding: 1rem;
   text-align: center;
 }
-
-.list-heading {
-  color: #7D7D8C;
+.image-container:hover .bottom-overlay {
+  opacity: 1;
 }

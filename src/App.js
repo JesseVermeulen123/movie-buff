@@ -1,3 +1,4 @@
+//  Packages
 import React, { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -58,7 +59,10 @@ function App() {
   return (
     <>
       {/* Header */}
-      <header>Movie Buff</header>
+      <header className="header">
+        <div className="logo-1">Movie</div>
+        <div className="logo-2">Buff</div>
+      </header>
 
       <div className="container-fluid movie-app">
         {/* Movies Heading and Search box */}
