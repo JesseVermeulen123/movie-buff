@@ -43,8 +43,17 @@ function App() {
   // Add movie to Favourites
   const addFavouriteMovie = (movie) => {
     const newFavouriteList = [...favourites, movie];
-    setFavourites(newFavouriteList);
-    saveToLocalStorage(newFavouriteList);
+    const set = new Set();
+    const uniqueItems = [];
+    for (const item of newFavouriteList) {
+      if (set.has(item.imdbID)) {
+        continue;
+      }
+      set.add(item.imdbID);
+      uniqueItems.push(item);
+    }
+    setFavourites(uniqueItems);
+    saveToLocalStorage(uniqueItems);
   };
 
   // Remove movie from Favourites
@@ -55,7 +64,6 @@ function App() {
     setFavourites(newFavouriteList);
     saveToLocalStorage(newFavouriteList);
   };
-
   return (
     <>
       {/* Header */}

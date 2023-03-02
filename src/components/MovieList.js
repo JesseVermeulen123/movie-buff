@@ -4,7 +4,7 @@ const MovieList = (props) => {
   return (
     <>
       {props.movies.map((movie, index) => (
-        <div className="image-container d-flex justify-content-start m-3">
+        <div key={movie.imdbID} className="image-container d-flex justify-content-start m-3">
           {/* Top Overlay */}
           <div className="top-overlay d-flex">
             <ul>
@@ -18,7 +18,7 @@ const MovieList = (props) => {
                 <strong>Type:</strong> {movie.Type}
               </li>
               <li>
-                <strong>IMDB ID:</strong> {movie.imdbID}
+                <strong>IMDb ID:</strong> {movie.imdbID}
               </li>
             </ul>
           </div>
