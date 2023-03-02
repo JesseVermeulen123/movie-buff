@@ -2,7 +2,7 @@
 
 ## Description
 
-This is a movie app built using the React framework and the OMdb API
+This is a movie app built using the React framework and the OMDb API
 
 ## Features
 
