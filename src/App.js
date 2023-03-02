@@ -15,17 +15,17 @@ function App() {
   const [searchValue, setSearchValue] = useState("");
 
   // Get movies from API based on search input
-  const getMovieRequest = async () => {
-    const url = `http://www.omdbapi.com/?s=${searchValue}&apikey=6993a6e4`;
-    const response = await fetch(url);
-    const responseJson = await response.json();
-    if (responseJson.Search) {
-      setMovies(responseJson.Search);
-    }
-  };
 
   useEffect(() => {
-    getMovieRequest(searchValue);
+    const fetchProjects = async () => {
+      const url = `https://www.omdbapi.com/?s=${searchValue}&apikey=6993a6e4`;
+      const response = await fetch(url);
+      const responseJson = await response.json();
+      if (responseJson.Search) {
+        setMovies(responseJson.Search);
+    }
+  }
+    fetchProjects()
   }, [searchValue]);
 
   useEffect(() => {
