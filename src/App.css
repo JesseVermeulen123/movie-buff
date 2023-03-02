@@ -39,11 +39,7 @@ body {
   overflow-x: auto;
   overflow-y: hidden;
   flex-wrap: nowrap;
-  -ms-overflow-style: none; /* Internet Explorer 10+ */
-  scrollbar-width: none; /* Firefox */
-}
-.movie-app > .row::-webkit-scrollbar {
-  display: none; /* Safari and Chrome */
+
 }
 
 /* Poster Image */
